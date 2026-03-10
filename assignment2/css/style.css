@@ -1,0 +1,329 @@
+/* 
+filename: style.css
+author: Tran Quoc Toan 
+description: CSS for assignment 2 
+*/
+
+/* General style  */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    background-image: url("image/bg.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    overscroll-behavior: none;
+    box-sizing: border-box;
+}
+
+/* Header and navigation bar  */
+
+header {
+    background-color: rgb(233, 200, 200);
+    font-size: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    margin: 0;
+    display: flex;
+    position: fixed;
+    width: 90%;
+    z-index: 3;
+}
+
+#title {
+    margin: 0;
+    padding: 10px;
+    color: black;
+    font-weight: bold;
+    width: fit-content;
+
+}
+
+#current {
+    background-color: #8D7B68;
+}
+
+nav {
+    padding: 0;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style-type: none;
+    margin: 0 0 5px 0;
+    padding: 0;
+}
+
+nav li a {
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    border-radius: 15px;
+}
+
+nav li a:hover {
+    background-color: grey;
+}
+
+#nav {
+    display: none;
+}
+
+nav label img {
+    display: none;
+}
+
+/* Responsive navigation bar */
+
+@media(max-width: 900px) {
+
+    nav label {
+        color: rgb(236, 182, 182);
+    }
+
+    nav label img {
+        display: inline-block;
+        background-color: #333;
+        border: none;
+        cursor: pointer;
+        margin: 0;
+    }
+
+    nav ul {
+        display: none;
+        margin: 0;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: fit-content;
+        background-color: #8D7B68;
+        padding: 0;
+        transition: 0.3s;
+        text-align: center;
+    }
+
+    #nav {
+        display: none;
+    }
+
+    ul li {
+        margin: 0;
+        display: block;
+        width: 100%;
+        padding: 5px 0;
+    }
+
+    nav ul li:hover {
+        background-color: darkslategray;
+    }
+
+    nav li a:hover {
+        background-color: transparent;
+    }
+
+    input[type=checkbox]:checked~ul {
+        display: block;
+    }
+
+    #current {
+        background: none;
+        color: orange;
+    }
+
+}
+
+/* index.html */
+
+/* intro section  */
+
+#intro img {
+    overflow: hidden;
+}
+
+#intro {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 90vh;
+    width: 100%;
+}
+
+#intro .content {
+    width: 100%;
+    position: absolute;
+    top: 35%;
+    color: #fff;
+    text-align: center;
+}
+
+#intro a {
+    font: 40px;
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    padding: 10px;
+    text-align: center;
+}
+
+#intro .content h1 {
+    font-size: 60px;
+}
+
+#intro p {
+    font-size: 20px;
+}
+
+/* history section  */
+
+#history {
+    background-color: #9b9e82;
+    padding: 70px 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#history h2 {
+    font-size: 40px;
+}
+
+#history img {
+    margin-right: 20px;
+}
+
+@media (max-width:1200px) {
+    #history {
+        flex-wrap: wrap;
+    }
+
+    #history img {
+        min-width: 300px;
+    }
+}
+
+/* menu section  */
+
+#menu {
+    color: black;
+    background-color: #a5679a;
+    margin: 0;
+}
+
+#menu .title {
+    text-align: center;
+    font-size: 35px;
+    padding-top: 20px;
+}
+/* menu item cards */
+
+#box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.container {
+    height: 670px;
+    max-width: 400px;
+    width: auto;
+    padding: 0px 0px;
+    border-radius: 20px;
+    margin: 50px;
+    overflow: hidden;
+    text-align: center;
+    transform: translateY(-40px);
+    position: relative;
+    top: 30px;
+}
+
+#choco {
+    background-color: #6b3e26;
+    color: white;
+}
+
+#vani {
+    background-color: #ede7cf;
+}
+
+#pink {
+    background-color: #ffc5d9;
+}
+
+.container:hover {
+    box-shadow: 0 0 20px rgba(48, 48, 48, 0.8);
+
+}
+
+.container p {
+    text-align: justify;
+    margin: 20px;
+}
+
+.container a {
+    color: black
+}
+
+#choco a {
+    color: white;
+}
+
+/* style for forms */
+
+#reg {
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(#93a4c4, #c2f2d0, #fdf5c9, #ffcb85);
+    margin-top: 20vh;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#reg form div {
+    margin: 15px 0;
+}
+
+#reg h2 {
+    margin-top: 0;
+}
+
+/* features page */
+
+#features h1 {
+    margin-top: 15vh;
+    color: rgb(91, 107, 151);
+    text-shadow: 0 0 5px black;
+    text-align: center;
+    font-size: 50px;
+}
+
+#features div {
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 10px;
+}
+
+/* footer  */
+
+footer {
+    margin-bottom: 0;
+    color: white;
+    background-color: #523535;
+    margin-top: auto;
+    text-align: center;
+}
