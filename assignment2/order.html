@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Web Development">
+    <meta name="keywords" content="Assignment 2">
+    <meta name="author" content="Tran Quoc Toan">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="js/script.js"></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.css">
+
+    <title>Order</title>
+</head>
+
+<body>
+    <!-- Header and navigation bar  -->
+    <header>
+
+        <h1 id="title">Sweet Life </h1>
+
+        <nav>
+            <input type="checkbox" id="nav">
+            <label for="nav"><img src="images/setup.png" alt="navbarlogo"></label>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="registration.html">Register</a></li>
+                <li><a id="current">Order</a></li>
+                <li><a href="features.html">Features</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <!-- Order form -->
+    <main id="reg">
+        <h2>Order</h2>
+
+        <form id="ordform" action="http://mercury.swin.edu.au/it000000/cos10005/formtest.php" method="post">
+            <!-- Order method -->
+            <fieldset>
+                <legend>Fill in the necessary information</legend>
+                <div>
+                    <label>How will you take your order?</label>
+                    <input type="radio" id="delivery" value="delivery" name="order_method">
+                    <label>Delivery</label>
+                    <input type="radio" id="pickup" value="pickup" name="order_method">
+                    <label>Pick-up</label>
+                </div>
+                <!-- Address -->
+                <div>
+                    <div>
+                        <label>Delivery address</label>
+                        <input id="deliadd" type="text" name="delivery_address" disabled>
+                    </div>
+                    <div>
+                        <label>Billing address same as delivery address</label>
+                        <input id="same" type="checkbox" name="same" disabled>
+                    </div>
+                    <div>
+                        <label>Billing address</label>
+                        <input id="billadd" type="text" name="billing_adress" disabled>
+                    </div>
+                </div>
+                <div>
+                    <label>Contact number</label>
+                    <input id="contact" type="number" name="contact_number">
+                </div>
+                <div>
+                    <label>Email (for receipt)</label>
+                    <input type="email" id="email2" name="email">
+                </div>
+                <div>
+                    <label>Payment method</label>
+                    <input type="radio" name="payment_method" id="paypickup" value="onpick">
+                    <label>On pick-up</label>
+                    <input type="radio" name="payment_method" id="payonline" value="online">
+                    <label>Online</label>
+                </div>
+            </fieldset>
+            <!-- Payment -->
+            <div id="creditcard">
+                <fieldset>
+                    <legend>Credit card information</legend>
+                    <div>
+                        <label>Choose a type of credit card:</label>
+                        <select id="card" name="credit_card" disabled>
+                            <option value="">--Please select--</option>
+                            <option value="visa">VISA</option>
+                            <option value="master">MasterCard</option>
+                            <option value="american">American Express</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Enter credit card number</label>
+                        <input id="creditnum" type="number" name="card_number" disabled>
+                    </div>
+                </fieldset>
+            </div>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+
+    </main>
+    <!-- Footer -->
+    <footer>
+        <p>Tran Quoc Toan - COS10005</p>
+        <p><a></a>  Background by Google</a> 
+    </footer>
+</body>
+
+</html>
